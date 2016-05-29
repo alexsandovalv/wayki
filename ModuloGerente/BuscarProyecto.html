@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Waiky - Buscar Proyecto</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
+		<link rel="shortcut icon" href="../image/favicon.ico" />
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.form-group{
+				margin: 5px;
+			}
+			th{
+				background-color: #419641 !important;
+			}
+			.glyphicon{
+				color:green;
+			}
+			td {
+				 padding: 0;
+				 margin: 0;
+			}
+			.item>img {
+			    height: 600px;
+			    width: 600px;
+			}
+
+							
+		</style>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">
+				<img src="../image/logo.png" height="30" width="100" /></a>
+	        </div>
+	       <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"> <a href="Principal.html">Inicio </a></li>
+	            <li class="active"><a href="MiOrganizacion.html">Mi Organizacion</a> </li>
+	            <li ><a href="buscarProyecto.html">Buscar Proyectos</a></li>
+	            <li class="active"><a href="CrearProyecto.html">Crear Nuevo Proyecto</a></li>
+	            <li class="active"><a href="NuestrosProyectos.html">Nuestros Proyectos</a></li>
+
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li>
+	            	<p class="navbar-text navbar-right">
+	            		<i class="glyphicon glyphicon-user"></i>&nbsp;Franco Damiani
+	            	</p>
+		        </li>
+		        <li>
+	                <a href="/wayki" class="navbar-link"><i class="glyphicon glyphicon-off"></i>&nbsp;Cerrar Sesion</a>
+	            </li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+
+	    <div class="container">
+	    	<div class="header-title">
+	    		<h2 class="text-center text-uppercase"><strong>Buscar Proyecto</strong></h4>
+	    	</div>
+
+	    	<div class="col-xs-12 col-sm-12 col-md-11 container-fluid">
+				<div class="row">				
+
+					<form action="#" class="form-horizontal" rol="form">
+						<fieldset>
+							<legend>Parámetros de Búsqueda</legend>
+							<div class="col-xs-12 col-md-12">
+								
+								<div class="form-group">
+									<label for="txtProyecto" class="col-sm-4 control-label">Nombre del Proyecto :</label>
+									<div class="col-sm-8">
+										<input type="text" id="txtProyecto" class="form-control" value="" placeholder="" />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="txtAreaNatural" class="col-sm-4 control-label">Área Natural Beneficiada :</label>
+									<div class="col-sm-8">
+										<input type="text" id="txtAreaNatural" class="form-control" value="" placeholder="" />
+									</div>														
+								</div>
+								<div class="form-group">
+									<label for="txtOrganizacion" class="col-sm-4 control-label">Nombre de la Organización :</label>
+									<div class="col-sm-8">
+										<input type="text" id="txtOrganizacion" class="form-control" value="" placeholder="" />
+									</div>														
+								</div>
+							
+
+								<div class="form-group">
+									<label for="txtTipoProyecto" class="col-sm-4 control-label">Tipo de Proyecto :</label>
+									<div class="col-sm-8">
+										<select id="cboTipoProyecto" class="form-control" value="1" >
+										     <option value="0" selected="true"></option>
+											<option value="1" >Investigación y Tecnología</option>
+											<option value="2">Formación y Capacitación</option>
+											<option value="3">Información y Comunicación</option>
+											<option value="4" >Participación y Dinamización Social</option>
+											<option value="5">Estudios e Investigación</option>
+											<option value="6" >Conservación de especie</option>
+											<option value="7" >Construcción e Infraestrución</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="txtEstadoProyecto" class="col-sm-4 control-label">Estado de Proyecto :</label>
+									<div class="col-sm-8">
+										<select id="cboEstadoProyecto" class="form-control" value="1" >
+										     <option value="0" selected="true"></option>
+										     <option value="1">Cancelado</option>
+										     <option value="2" >Finalizado</option>
+											<option value="3" >En Proceso</option>
+											<option value="4">Suspendido</option>
+											
+										</select>
+									</div>
+								</div>
+
+								
+
+								<div class="form-group">
+									<label for="txtFechaDesde" class="col-sm-4 control-label">Fecha de Creación Desde:</label>
+									<div class="col-sm-2 fechapicker input-group" id='datetimepicker'>
+										<input type="text" id="txtFechaDesde" class="form-control" value="" placeholder="" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>																
+								</div>
+								<div class="form-group">
+									<label for="txtFechaHasta" class="col-sm-4 control-label">Fecha de Creación Hasta:</label>
+									<div class="col-sm-2 fechapicker input-group" id='datetimepicker'>
+										<input type="text" id="txtFechaHasta" class="form-control" value="" placeholder="" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>	
+
+								</div>
+								<div class="form-group">
+									<div class="col-sm-16">
+										<div class="form-group">
+											<a class="btn btn-success pull-right showActivo" href="#" role="button">
+												Buscar Proyectos
+											</a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</fieldset>
+					<hr>
+					</form>
+					<fieldset>
+							<legend>Resultado de la Búsqueda</legend>
+
+							<div class="table-responsive table-list-one" style="border:1px">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th >Código</th>
+											<th>Nombre del Proyecto</th>
+											<th>Tipo de Proyecto</th>
+											<th>Estado</th>
+											<th>Área de Conservación</th>
+											<th>Estado</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>123</td>											
+											<td>Sensibilización ambiental durante el transporte fluvial en el Amazonas</td>
+											<td>Información y Comunicación</td>
+											<td>Finalizado</td>
+											<td>Pacaya Samiria</td>
+											<td>
+												<a href="#" class="verProyecto">
+													<span class="glyphicon glyphicon-search"></span>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>462</td>											
+											<td>Desarrollo de Aplicación Móvil de denuncias de minería ilegal</td>
+											<td>Información y Comunicación</td>
+											<td>Finalizado</td>
+											<td>Reserva Nacional TamboPata</td>
+											<td>
+												<a href="#" class="verProyecto">
+													<span class="glyphicon glyphicon-search"></span>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>743</td>											
+											<td>Proyecto integral de gestion ambiental de residuos solidos en la ciudad binacional de desaguedor</td>
+											<td>Gestión Ambiental</td>
+											<td>Finalizado</td>
+											<td>Reserva Nacional del Titicaca</td>
+											<td>
+												<a href="#" class="verProyecto">
+													<span class="glyphicon glyphicon-search"></span>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							    </div>
+							</div>
+						</fieldset>
+				</div>
+	    	</div>
+	    </div>
+
+		<!-- jQuery -->
+		<script src="../js/jquery.js"></script>		
+		<!-- Bootstrap JavaScript -->
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+		<script src="../js/bootstrap-datetimepicker.min.js"></script>
+		
+
+		<script src="../js/bloodhound.min.js"></script>
+		<script src="../js/typeahead.jquery.min.js"></script>
+		<script src="../js/typeahead.bundle.min.js"></script>
+		<script src="../js/bootstrap3-typeahead.min.js"></script>
+		
+		
+
+		<script type="text/javascript">
+			$(function() {
+
+				var typeahead = jQuery.fn.typeahead.noConflict();
+				jQuery.fn._typeahead = typeahead;
+
+
+
+				$('#datetimepicker').datetimepicker({
+                    locale: 'es',
+                    format: 'L'
+                });
+
+                $(".showImg").click(function(event) {
+                	$("#showImgModal").modal({
+						keyboard: false,
+						backdrop: "static",
+						show : true
+					});
+                });
+
+               
+				 $(".verProyecto").click(function(event) {
+                	$("#verProyectoModal").modal({
+						keyboard: false,
+						backdrop: "static",
+						show : true
+					});
+                });
+
+				
+			});		
+		</script>
+
+		
+		<!-- Modal -->
+		<div class="modal fade" id="verProyectoModal" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" >
+		    <div class="modal-content">
+		      <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+				</button>
+				<!--PESTAÑAS-->
+				<script>
+				$(document).ready(function(){
+				    $(".nav-tabs a").click(function(){
+				        $(this).tab('show');
+				    });
+				    $('.nav-tabs a').on('shown.bs.tab', function(event){
+				        var x = $(event.target).text();         // active tab
+				        var y = $(event.relatedTarget).text();  // previous tab
+				        $(".act span").text(x);
+				        $(".prev span").text(y);
+				    });
+				});
+				</script>
+				<ul class="nav nav-tabs">
+				    <li class="active" ><a href="#home">Información del Proyecto</a></li>
+				    <li  ><a href="#tab1">Documentación Pública del Proyecto</a></li>
+				    <li  ><a href="#tab2">Galeria de Imagenes</a></li>
+ 			  	</ul>
+ 			  	<!--PESTAÑAS-->
+			</div>
+			<div class="tab-content" >
+			    <div id="home" class="tab-pane fade in active">
+					<div class="modal-body">
+		              	<div class="row" >
+			        		<form class="form-horizontal col-md-offset-1" id="searchCode" action="#" method="post">
+
+							  <div class="form-group">	
+							    <div class="col-sm-3; text-success" >Nombre del Proyecto :</div>
+							     <div  class="col-sm-8">Proyecto integral de gestion ambiental de residuos solidos en la ciudad de Desaguadero</div>
+							  </div>	
+							  <div class="form-group">
+							    <div  class="col-sm-3; text-success">Organización :</div>
+							    <div  class="col-sm-8">Autoridad Binacional Autónoma del Sistema Hídrico del lago Titicaca</div>
+							    
+							  </div>		
+							  <div class="form-group">
+							    <div  class="col-sm-3; text-success">Tipo del Proyecto :</div>
+							    <div  class="col-sm-8">Gestión Ambiental</div>
+							    
+							  </div>				  
+							   <div class="form-group">
+							     <div  class="col-sm-3; text-success">Objetivo General :</div>
+							     <div  class="col-sm-8  ">Diseñar a nivel de factibilidad el Plan Integral de Gestión Ambiental de Residuos Sólidos Urbanos en Desaguadero Perú y Bolivia, de manera que permitan generar una cultura que oriente al cambio progresivo de los hábitos y costumbres en el manejo de los residuos sólidos.</div>
+							  </div>	
+							   <div class="form-group">
+							     <div  class="col-sm-3; text-success">Objetivos Específicos :</div>
+							     <div  class="col-sm-8  "> a)Planeamiento a mediano plazo con objetivos y metas de mejora constante de la calidad de la Gestión de los Residuos Sólidos.<br />
+							     b) Presupuestos de inversión y operación que suministren los medios apropiados a los programas y proyectos para lograr el propósito planificado.<br />
+								 c) Ejecución transparente y participativa con los usuarios del servicio.</div>
+							  </div>	
+							  
+							  <div class="form-group">
+							     <div  class="col-sm-3; text-success">Descripción de Actividades :</div>
+							     <div  class="col-sm-8  ">Recolección, Barrido, Transporte y Transferencia, Tratamiento (Reciclaje, compostaje, incineración) y Disposición final en un Relleno Sanitario de Residuos Sólidos inútiles</div>
+							  </div>	
+							  <div class="form-group">
+							     <div  class="col-sm-3; text-success">Area Natural Beneficiada :</div>
+							     <div  class="col-sm-8  ">Reserva Nacional LAgo Titikaka</div>
+							  </div>
+							   
+							  
+							</form>
+			        	</div>
+				        
+				    </div>
+			    </div>
+			    <div id="tab1" class="tab-pane fade">
+			       	
+					<fieldset>
+						<div class="table-responsive table-list-one; col-lg-12" >
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th style="background-color: green">Documento</th>
+										<th style="background-color: green">Autor</th>
+										<th style="background-color: green"> </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Proyecto Integral de Gestión Ambiental de Residuos Sólidos en la ciudad Binacional de Desaguadero - Bolivia - Peru</td>											
+										<td>Ing. Edwin Maydana Iturriaga</td>
+										<td>
+											<a href="../documentos/proyecto_desaguadero.pdf" class="verProyecto" download="Proyecto Integral de Gestión Ambiental de Residuos Sólidos en la ciudad Binacional de Desaguadero - Bolivia - Peru.pdf">
+												<span class="glyphicon glyphicon-save"></span>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+					</fieldset>
+			    </div>
+			     <div id="tab2" class="tab-pane fade">
+			       	<fieldset>
+			    		
+						<div class="table-responsive table-list-one col-lg-12" >
+							<div>
+					    		<h3><strong>Galería de Imágenes del Proyecto</strong></h3>
+						    </div>
+					    	
+					    	<br/>
+							<!--CARRUSEL-->
+							<div class="c-wrapper">
+								<div id="carousel-example-generic" class="carousel slide">
+								  <!-- Indicators -->
+								  <ol class="carousel-indicators">
+								    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+								  </ol>
+
+								  <!-- Wrapper for slides -->
+								  <div class="carousel-inner">
+								    <div class="item active">
+								      <img src="../image/Titicaca.jpg"  class="img-responsive center-block"  >
+								      
+								    </div>
+								        <div class="item">
+								      <img src="../image/MapaTitikaka.png"  class="img-responsive center-block" >
+								     
+								    </div>
+								    <div class="item">
+								      <img src="../image/ttkk.jpg"   class="img-responsive center-block" >
+								     
+								    </div>
+								  </div>
+
+								  <!-- Controls -->
+								  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+								    <span class="icon-prev"></span>
+								  </a>
+								  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+								    <span class="icon-next"></span>
+								  </a>
+								</div>
+							</div>	
+				        </div>
+					        <!--FIN CARRUSEL-->
+					</fieldset>
+				</div>
+    		</div>
+
+			
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- End Modal -->
+
+	</body>
+</html>
+

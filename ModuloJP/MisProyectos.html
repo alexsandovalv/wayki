@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>wayki - Mis Proyecto</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="shortcut icon" href="../image/favicon.ico" />
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.form-group{
+				margin: 5px;
+			}
+			th{
+				background-color: #3578b1 !important;
+			}
+			.glyphicon{
+				color:blue;
+			}
+			td {
+				 padding: 0;
+				 margin: 0;
+			}
+			.item>img {
+			    height: 300px;
+			    width: 300px;
+			}
+
+							
+		</style>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          
+				 <a class="navbar-brand" href="#">
+				<img src="../image/logo.png" height="30" width="100" /></a>
+	        </div>
+	       <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"> <a href="Principal.html">Inicio </a></li>
+	            <li ><a href="buscarProyecto.html">Buscar Proyectos</a></li>
+	            <li class="active"><a href="MisProyectos.html">Mis Proyectos</a></li>
+
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li>
+	            	<p class="navbar-text navbar-right">
+	            		<i class="glyphicon glyphicon-user"></i>&nbsp;Franco Damiani
+	            	</p>
+		        </li>
+		       	<li>
+	                <a href="/wayki" class="navbar-link"><i class="glyphicon glyphicon-off"></i>&nbsp;Cerrar Sesion</a>
+	            </li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+	    <div class="container">
+	    	<div class="header-title">
+	    		<h2 class="text-center text-uppercase"><strong>Mis Proyectos Asignados</strong></h2>
+	    	</div>
+	    	<div class="container">
+	    	<div >
+				<div class="row">				
+					<fieldset>
+						<style>
+							th, td {
+							    padding: 0px;
+
+							}
+						</style>
+
+						<div class="table-responsive table-list-one">
+							<table class="table table-hover"  >
+								<thead >
+									<tr>
+										<th>Código</th>
+										<th>Nombre del Proyecto</th>
+										<th>Tipo de Proyecto</th>
+										<th>Estado</th>
+										<th>Área Natural</th>
+										<th width="280">Acciones</th>
+									</tr>
+								</thead>
+								<tbody >
+									<tr >
+										<td>123</td>											
+										<td>Sensibilización ambiental durante el transporte fluvial en el Amazonas</td>
+										<td>Información y Comunicación</td>
+										<td>Finalizado</td>
+										<td>Pacaya Samiria</td>
+										<td>
+											<div class="btn-group" role="group" aria-label="...">
+											  <a href="#" class="planificarProyecto"><button type="button" class="btn btn-primary btn-sm">Planificar</button></a>
+											  <a href="#" class="ejecutarProyecto"><button type="button" class="btn btn-primary btn-sm">Ejecutar</button></a>
+											  <a href="#" class="evaluarProyecto"><button type="button" class="btn btn-primary btn-sm">Evaluar</button></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>687</td>											
+										<td>Desarrollo de Herramienta para la Gestión de Proyectos de Desarrollo</td>
+										<td>Investigación y Tecnología</td>
+										<td>En Ejecución</td>
+										<td>Bosque de Protección Alto Mayo</td>
+										<td>
+											<div class="btn-group" role="group" aria-label="...">
+											  <a href="#" class="planificarProyecto"><button type="button" class="btn btn-primary btn-sm">Planificar</button></a>
+											  <a href="#" class="ejecutarProyecto"><button type="button" class="btn btn-primary btn-sm">Ejecutar</button></a>
+											  <a href="#" class="evaluarProyecto"><button type="button" class="btn btn-primary btn-sm">Evaluar</button></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>214</td>											
+										<td>Proyecto integral de gestion ambiental de residuos solidos en la ciudad binacional de desaguedor</td>
+										<td>Gestión Ambiental</td>
+										<td>Finalizado</td>
+										<td>Reserva Nacional del Titicaca</td>
+										<td>
+											<div class="btn-group" role="group" aria-label="...">
+											  <a href="#" class="planificarProyecto"><button type="button" class="btn btn-primary btn-sm">Planificar</button></a>
+											  <a href="#" class="ejecutarProyecto"><button type="button" class="btn btn-primary btn-sm">Ejecutar</button></a>
+											  <a href="#" class="evaluarProyecto"><button type="button" class="btn btn-primary btn-sm">Evaluar</button></a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</div>
+	    	</div>
+	    </div>
+
+	    </div>
+
+		<!-- jQuery -->
+		<script src="../js/jquery.js"></script>		
+		<!-- Bootstrap JavaScript -->
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+		<script src="../js/bloodhound.min.js"></script>
+		<script src="../js/typeahead.jquery.min.js"></script>
+		<script src="../js/typeahead.bundle.min.js"></script>
+		<script src="../js/bootstrap3-typeahead.min.js"></script>
+		
+		
+
+		<script type="text/javascript">
+			$(function() {
+
+				var typeahead = jQuery.fn.typeahead.noConflict();
+				jQuery.fn._typeahead = typeahead;
+
+                 $(".planificarProyecto").click(function(event) {
+					    var myWindow = window.open("planificarProyecto.html", "myWindow", "height=850,width=1700, left=60, top=100");
+					    
+					});
+
+	               $(".ejecutarProyecto").click(function(event) {
+					    var myWindow = window.open("ejecutarProyecto.html", "myWindow", "height=850,width=1700, left=60, top=100");
+					    
+					});
+	                $(".evaluarProyecto").click(function(event) {
+					    var myWindow = window.open("evaluarProyecto.html", "myWindow", "height=850,width=1700, left=60, top=100");
+					    
+					});
+			});		
+		</script>
+
+		<style type="text/css">
+			.typeahead, .tt-query, .tt-hint {
+			  width: 100%;
+			  padding: 8px 12px;
+			  font-size: 14px;
+			  line-height: 30px;
+			  border: 2px solid #ccc;
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  outline: none;
+			}
+
+			.typeahead {
+			  background-color: #fff;
+			}
+
+			.typeahead:focus {
+			  border: 2px solid #0097cf;
+			}
+
+			.tt-query {
+			  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+
+			.tt-hint {
+			  color: #999
+			}
+
+			.tt-menu {
+			  width: 100%;
+			  margin: 6px 0;
+			  padding: 8px 0;
+			  background-color: #fff;
+			  border: 1px solid #ccc;
+			  border: 1px solid rgba(0, 0, 0, 0.2);
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			}
+
+			.tt-suggestion {
+			  padding: 3px 20px;
+			  font-size: 12px;
+			  line-height: 24px;
+			}
+
+			.tt-suggestion:hover {
+			  cursor: pointer;
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion.tt-cursor {
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion p {
+			  margin: 0;
+			}			
+			.twitter-typeahead{
+			     width: 100%;
+			}
+			.tt-dropdown-menu {
+			     width: 100%;
+			}
+		</style>
+	
+
+	</body>
+</html>
+
+

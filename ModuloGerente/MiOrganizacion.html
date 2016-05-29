@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mi Compañia</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet"  href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.form-group{
+				margin: 5px;
+			}
+			.glyphicon{
+					color:green;
+				}
+		</style>
+	</head>
+	<body>
+			<script type="text/javascript">
+				var typeahead = jQuery.fn.typeahead.noConflict();
+				jQuery.fn._typeahead = typeahead;
+				
+                $(".showImg").click(function(event) {
+                	$("#showImgModal").modal({
+						keyboard: false,
+						backdrop: "static",
+						show : true
+					});
+                });
+			</script>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">
+				<img src="../image/logo.png" height="30" width="100" /></a>
+	        </div>
+	       <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li > <a href="Principal.html">Inicio </a></li>
+	            <li class="active"><a href="MiOrganizacion.html">Mi Organizacion</a> </li>
+	            <li ><a href="buscarProyecto.html">Buscar Proyectos</a></li>
+	            <li  ><a href="CrearProyecto.html">Crear Nuevo Proyecto</a></li>
+	            <li ><a href="NuestrosProyectos.html">Nuestros Proyectos</a></li>
+
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li>
+	            	<p class="navbar-text navbar-right">
+	            		<i class="glyphicon glyphicon-user"></i>&nbsp;Franco Damiani
+	            	</p>
+		        </li>
+		       <li>
+	                <a href="/wayki" class="navbar-link"><i class="glyphicon glyphicon-off"></i>&nbsp;Cerrar Sesion</a>
+	            </li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+
+	    <div class="container">
+	    	<div class="header-title">
+	    		<h2 class="text-center text-uppercase"><strong>Mi Organización</strong></h2>
+	    	</div>
+
+	    	<div class="col-xs-12 col-sm-12 col-md-12 container-fluid ">
+				<div class="row">				
+
+					<form action="#" class="form-horizontal" rol="form">
+						<fieldset>
+							<legend>Datos Generales</legend>
+							<div class="col-xs-2 col-md-4">
+								<div class="form-group">
+									<img src="../image/logocxn.png" width="300px" />
+									<div class="form-group">
+										<a class="btn btn-default btn-sm pull-left showActivo" href="#" role="button">
+											Cambiar Imagen de Perfil
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-8">
+								<div class="form-group">
+									<label for="txtFecha" class="col-sm-4 control-label">Nombre de la Organización :</label>
+									<div class="col-sm-8">
+										<input type="text" id="txtNombreOrganizacion" class="form-control" value="Conservamos por Naturaleza" placeholder="" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="txtFecha" class="col-sm-4  control-label">Tipo de Organización :</label>
+									<div class="col-sm-8">
+										<select id="cboTipoOrganizacion" class="form-control" value="1" >
+										    <option value="0"></option>
+											<option value="1">Asociación Civil sin Fines de Lucro</option>
+											<option value="2">Área de Administración Nacional (SINANPE)</option>
+											<option value="3">Área de Conservación Privada</option>
+											<option value="4" >Área de Conservación Regional</option>
+											<option value="5" selected="true">Organismo No Gubernamental</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-4 control-label">Cuentanos algo de tu Organización :</label>
+									<div class="col-sm-8" >
+										<textarea rows="10" cols="60" id="txtAcercade" class="form-control"   > Conservamos por Naturaleza es una plataforma creada por la SPDA que brinda apoyo a iniciativas de conservación voluntarias, promoviendo alianzas y acciones para contribuir al cuidado de la naturaleza 
+										</textarea>
+										
+									</div>																
+								</div>
+
+								<div class="form-group">
+									<label  class="col-sm-4 control-label">Página Web :</label>
+									<div class="col-sm-8">
+										<input type="text" id="txtPagina" class="form-control" value="www.conservamospornaturaleza.org" placeholder="Dinos algo de tu organización" />
+									</div>																
+								</div>
+								
+
+								<div class="form-group">
+									<label for="txtFechaConstitucion" class="col-sm-4 control-label">Fecha de Constitución :</label>
+									<div class="col-sm-2 fechapicker input-group" id='datetimepicker'>
+										<input type="text" id="txtFecha" class="form-control" value="" placeholder="" style="width:100px" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>																
+								</div>
+							</div>
+							</div>
+
+							
+						</fieldset>
+						
+
+						
+						
+						<br>
+						<hr>
+						<div class="col-xs-offset-6  btn-group btn-group-lg" role="group" aria-label="..."  >
+								<button type="button" onclick="window.location.href='Principal.html'" class="btn btn-success">Guardar</button>
+								<button type="button" onclick="window.location.href='Principal.html'" class="btn btn-default">Cancelar</button>
+							</div>
+					</form>
+				</div>
+	    	</div>
+	    </div>
+
+		<!-- jQuery -->
+		<script src="../js/jquery.js"></script>		
+		<!-- Bootstrap JavaScript -->
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+		<script src="../js/bootstrap-datetimepicker.min.js"></script>
+		
+
+		<script src="../js/bloodhound.min.js"></script>
+		<script src="../js/typeahead.jquery.min.js"></script>
+		<script src="../js/typeahead.bundle.min.js"></script>
+		<script src="../js/bootstrap3-typeahead.min.js"></script>
+		
+		
+
+		<script type="text/javascript">
+			$(function() {
+
+				var typeahead = jQuery.fn.typeahead.noConflict();
+				jQuery.fn._typeahead = typeahead;
+
+
+
+				$('#datetimepicker').datetimepicker({
+                    locale: 'es',
+                    format: 'L'
+                });
+
+			});		
+		</script>
+
+		<style type="text/css">
+			.typeahead, .tt-query, .tt-hint {
+			  width: 100%;
+			  padding: 8px 12px;
+			  font-size: 14px;
+			  line-height: 30px;
+			  border: 2px solid #ccc;
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  outline: none;
+			}
+
+			.typeahead {
+			  background-color: #fff;
+			}
+
+			.typeahead:focus {
+			  border: 2px solid #0097cf;
+			}
+
+			.tt-query {
+			  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+
+			.tt-hint {
+			  color: #999
+			}
+
+			.tt-menu {
+			  width: 100%;
+			  margin: 6px 0;
+			  padding: 8px 0;
+			  background-color: #fff;
+			  border: 1px solid #ccc;
+			  border: 1px solid rgba(0, 0, 0, 0.2);
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			}
+
+			.tt-suggestion {
+			  padding: 3px 20px;
+			  font-size: 12px;
+			  line-height: 24px;
+			}
+
+			.tt-suggestion:hover {
+			  cursor: pointer;
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion.tt-cursor {
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion p {
+			  margin: 0;
+			}			
+			.twitter-typeahead{
+			     width: 100%;
+			}
+			.tt-dropdown-menu {
+			     width: 100%;
+			}
+
+
+		</style>
+
+		
+
+
+	</body>
+</html>
+

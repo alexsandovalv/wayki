@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Proyecto Wayki</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
+		<link rel="shortcut icon" href="../image/favicon.ico" />
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.form-group{
+				margin: 5px;
+			}
+			.glyphicon{
+				color:green;
+			}
+			th{
+				background-color: #419641 !important;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">
+				<img src="../image/logo.png" height="30" width="100" /></a>
+	        </div>
+	       <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"> <a href="Principal.html">Inicio </a></li>
+	            <li class="active"><a href="MiOrganizacion.html">Mi Organizacion</a> </li>
+	            <li class="active"><a href="buscarProyecto.html">Buscar Proyectos</a></li>
+	            <li ><a href="CrearProyecto.html">Crear Nuevo Proyecto</a></li>
+	            <li class="active"><a href="NuestrosProyectos.html">Nuestros Proyectos</a></li>
+
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li>
+	            	<p class="navbar-text navbar-right">
+	            		<i class="glyphicon glyphicon-user"></i>&nbsp;Franco Damiani
+	            	</p>
+		        </li>
+		        <li>
+	                <a href="/wayki" class="navbar-link"><i class="glyphicon glyphicon-off"></i>&nbsp;Cerrar Sesion</a>
+	            </li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+		
+<!-- jQuery -->
+		<script src="../js/jquery.js"></script>		
+		<!-- Bootstrap JavaScript -->
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+		<script src="../js/bootstrap-datetimepicker.min.js"></script>
+		
+
+		<script src="../js/bloodhound.min.js"></script>
+		<script src="../js/typeahead.jquery.min.js"></script>
+		<script src="../js/typeahead.bundle.min.js"></script>
+		<script src="../js/bootstrap3-typeahead.min.js"></script>
+		
+		
+
+		<script type="text/javascript">
+			$(function() {
+
+				var typeahead = jQuery.fn.typeahead.noConflict();
+				jQuery.fn._typeahead = typeahead;
+
+
+
+				$('#datetimepicker').datetimepicker({
+                    locale: 'es',
+                    format: 'L'
+                });
+
+                $(".buscarANP").click(function(event) {
+                	$("#buscarANPModal").modal({
+						keyboard: false,
+						backdrop: "static",
+						show : true
+					});
+                });	
+											
+								
+			});		
+		</script>
+
+	    <div class="container">
+	    	<div class="header-title">
+	    		<h2 class="text-center text-uppercase"><strong>Crear Proyecto</strong></h2>
+	    	</div>
+
+	    	<div class="col-xs-12 col-sm-12 col-md-11 container-fluid"  >
+				<div class="row">				
+
+					<form action="#" class="form-horizontal" rol="form">
+						<fieldset>
+							<legend>Datos Generales</legend>
+							<div class="col-xs-12 col-md-12"  >
+								
+								<div class="form-group"  >
+   									<label for="txtNombreProyecto" class="col-sm-4 control-label" >Nombre del Proyecto :</label>
+									<div class="col-sm-8" >
+										<input type="text" id="txtNombreProyecto" class="form-control" value="Desarrollo de Herramienta para la Gestión de Proyectos de Desarrollo" placeholder="" />
+									</div>
+								</div>
+								
+								<div class="form-group" >
+									<label for="cboTipoProyecto" class="col-sm-4 control-label">Tipo de Proyecto :</label>
+									<div class="col-sm-8" >
+										<select id="cboTipoProyecto" class="form-control" value="1" >
+										    <option value="0"></option>
+											<option value="1" selected="true">Investigación y Tecnología</option>
+											<option value="2">Formación y Capacitación</option>
+											<option value="3">Información y Comunicación</option>
+											<option value="4" >Participación y Dinamización Social</option>
+											<option value="5">Estudios e Investigación</option>
+											<option value="6" >Conservación de especie</option>
+											<option value="7" >Construcción e Infraestrución</option>
+										</select>
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<label class="col-sm-4 control-label">Descripción del Proyecto :</label>
+									<div class="col-sm-8" >
+										<textarea rows="3" cols="60" id="txtDescripcionProyecto" class="form-control"  placeholder="">Realizar el análisis, diseño, construcción e implementación de una herramienta multiplataforma para servir de guía en la gestión y como repositorio de Proyectos de Desarrollo en Áreas Naturales
+										</textarea>
+										
+									</div>																
+								</div>
+
+
+								<div class="form-group" >
+									<label for="txtAreaNatural" class="col-sm-4 control-label">Área Natural Beneficiada:</label>
+									<div class="col-sm-6 input-group">
+										<input type="text" id="txtAreaNatural" class="form-control" value="Conceción para Conservación Ojos de Agua" placeholder="Seleccione el Área Natural objetivo del Proyecto" />
+										
+											<span  class="input-group-addon">
+												<span class="glyphicon glyphicon-search buscarANP"></span>
+											</span>
+										
+									</div>																
+								</div>
+							
+								<div class="form-group">
+									<label  class="col-sm-4 control-label">Objetivo General:</label>
+									<div class="col-sm-8">
+										<textarea rows="3" cols="60" id="txtDescripcionProyecto" class="form-control" >Promover, guiar durante la ejecución y brindar las herramientas necesarias para poner en práctica el uso colaborativo de la información a nivel de Organismos Gestores de Proyectos.
+										</textarea>
+									</div>																
+								</div>
+								<div class="form-group">
+									<label  class="col-sm-4 control-label">Objetivos Específicos:</label>
+									<div class="col-sm-8">
+										<textarea rows="9" cols="60" id="txtDescripcionProyecto" class="form-control">Construir una herramienta que apoye, conecte y guíe a los organismos gestores de proyectos de desarrollo en Áreas Naturales en la planificación, control y evaluación de proyectos.Promover el voluntariado en los jóvenes por medio de una herramienta movil que facilite el acceso a la información de las Áreas Naturales y los proyectos de desarrollo realizados, ejecutándose, o en planificación.Dar mayor visibilidad a los proyectos ralizados en áreas Naturales en la comunidad de turistas y voluntarios que visitan el país.Informar acerca de las áreas Naturales, recursos e importancia de las Áreas Naturales del Perú.Conectar voluntarios con los proyectos de desarrollo, generando mayor aprovechamiento de esta fuerza de trabajo.Conectar voluntarios o colaboradores remotos con los proyectos de desarrollo de Áreas Naturales.
+										</textarea>
+									</div>																
+								</div>
+
+								<div class="form-group">
+									<label for="txtFechaInicial" class="col-sm-4 control-label">Fecha de Inicio del Proyecto :</label>
+									<div class="col-sm-2 fechapicker input-group" id='datetimepicker'>
+										<input type="text" id="txtFechaInicial" class="form-control" value="22/05/2016" placeholder="01/01/2016" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>																
+								</div>
+
+								<div class="form-group">
+									<label for="txtFechaFinal" class="col-sm-4 control-label">Fecha de Fin del Proyecto :</label>
+									<div class="col-sm-2 fechapicker input-group" id='datetimepicker'>
+										<input type="text" id="txtFechaFinal" class="form-control" value="30/10/2016" placeholder="" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>																
+								</div>
+								<div class="form-group">
+									<label for="txtJefeProyecto" class="col-sm-4 control-label">Invitar Jefe de Proyecto:</label>
+									<div class="col-sm-6 input-group" id='txtJefeProyecto'>
+										<input type="text" id="txtJefeProyecto" class="form-control" value="franco.damiani@hotmail.com" placeholder="Ingrese un correo para invitar Jefe de Proyecto" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope"></span>
+										</span>
+									</div>																
+								</div>
+								
+							</div>
+						</fieldset>
+						
+						<hr>
+						<div class="col-xs-offset-6 col-sm-offset-4 col-md-offset-4 btn-group btn-group-lg" role="group" aria-label="...">
+								<button type="button" onclick="window.location.href='Principal.html'"  class="btn btn-success">Guardar</button>
+								<button type="button" onclick="window.location.href='Principal.html'" class="btn btn-default">Cancelar</button>
+							</div>
+					</form>
+				</div>
+	    	</div>
+	    </div>
+
+
+
+		<style type="text/css">
+			.typeahead, .tt-query, .tt-hint {
+			  width: 100%;
+			  padding: 8px 12px;
+			  font-size: 14px;
+			  line-height: 30px;
+			  border: 2px solid #ccc;
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  outline: none;
+			}
+
+			.typeahead {
+			  background-color: #fff;
+			}
+
+			.typeahead:focus {
+			  border: 2px solid #0097cf;
+			}
+
+			.tt-query {
+			  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+
+			.tt-hint {
+			  color: #999
+			}
+
+			.tt-menu {
+			  width: 100%;
+			  margin: 6px 0;
+			  padding: 8px 0;
+			  background-color: #fff;
+			  border: 1px solid #ccc;
+			  border: 1px solid rgba(0, 0, 0, 0.2);
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			}
+
+			.tt-suggestion {
+			  padding: 3px 20px;
+			  font-size: 12px;
+			  line-height: 24px;
+			}
+
+			.tt-suggestion:hover {
+			  cursor: pointer;
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion.tt-cursor {
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion p {
+			  margin: 0;
+			}			
+			.twitter-typeahead{
+			     width: 100%;
+			}
+			.tt-dropdown-menu {
+			     width: 100%;
+			}
+		</style>
+
+		<!--MODAL VER ANP-->
+		<div class="modal fade" id="buscarANPModal" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" >
+		    <div class="modal-content">
+		      <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+				</button>
+				<h4 class="modal-title" id="titleModalLabel">
+					<span>Selecccionar Área Natural</span>
+				</h4>
+			  </div>
+
+			  <div class="tab-content" >
+			    <div id="home" class="tab-pane fade in active">
+					<div class="modal-body">
+		              	<div class="row" >
+		              		<div class="form-group" >
+								<label for="txtANPFiltro" class="col-sm-4 control-label">Ingrese Área Natural :</label>
+								<div class="col-sm-4 input-group">
+									<input type="text" id="txtANPFiltro" class="form-control"  placeholder="Ingrese el nombre del Área Natural" />
+								</div>																
+							</div>
+						</div>	
+						<div class="row" >	
+			        		<div class="table-responsive table-list-one" style="border:1px">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th >Código</th>
+											<th>Área Natural</th>
+											<th>Ubicación</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr><td>1</td><td>Bosque de Protección Alto Mayo</td><td> San Martín</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>2</td><td>Bosque de Protección Pagaibamba</td><td> Cajamarca</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>3</td><td>Bosque de Protección Pui-Pui</td><td> Junín</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>4</td><td>Bosque de Protección Puquio Santa Rosa</td><td> La Libertad</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>5</td><td>Bosque de Protección San Matías-San Carlos</td><td> Pasco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>6</td><td>Coto de Caza El Angolo</td><td> Piura</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>7</td><td>Coto de Caza Sunchubamba</td><td> Cajamarca</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>9</td><td>Parque nacional Alto Purús</td><td> Madre de Dios</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>10</td><td>Parque nacional Bahuaja Sonene</td><td> Madre de Dios</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>11</td><td>Parque nacional Cerros de Amotape</td><td> Piura</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>12</td><td>Parque nacional Cordillera Azul</td><td> Huánuco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>13</td><td>Parque nacional Cutervo</td><td> Cajamarca</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>14</td><td>Parque nacional del Manu</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>15</td><td>Parque nacional del Río Abiseo</td><td> San Martín</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>16</td><td>Parque nacional Güeppi-Sekime</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>17</td><td>Parque nacional Huascarán</td><td> Áncash</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>18</td><td>Parque nacional Ichigkat Muja - Cordillera del Cóndor</td><td> Amazonas</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>19</td><td>Parque nacional Otishi</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>20</td><td>Parque nacional Sierra del Divisor</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>21</td><td>Parque nacional Tingo María</td><td> Huánuco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>22</td><td>Parque nacional Yanachaga-Chemillén</td><td> Pasco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>23</td><td>Refugio de Vida Silvestre Laquipampa</td><td> Lambayeque</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>24</td><td>Refugio de Vida Silvestre Pantanos de Villa</td><td> Lima</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>25</td><td>Reserva Comunal Airo Pai</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>26</td><td>Reserva Comunal Amarakaeri</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>27</td><td>Reserva Comunal Asháninka</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>28</td><td>Reserva Comunal Chayu Nain</td><td> Amazonas</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>29</td><td>Reserva Comunal El Sira</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>30</td><td>Reserva Comunal Huimeki</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>31</td><td>Reserva Comunal Machiguenga</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>32</td><td>Reserva Comunal Purús</td><td> Madre de Dios</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>33</td><td>Reserva Comunal Tuntanain</td><td> Amazonas</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>34</td><td>Reserva Comunal Yanesha</td><td> Pasco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>35</td><td>Reserva de Vida Silvestre Bosques Nublados de Udima</td><td> Cajamarca</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>36</td><td>Reserva nacional Allpahuayo-Mishana</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>37</td><td>Reserva nacional de Calipuy</td><td> La Libertad</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>38</td><td>Reserva nacional de Junín</td><td> Junín</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>39</td><td>Reserva nacional de Lachay</td><td> Lima</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>40</td><td>Reserva nacional de Paracas</td><td> Ica</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>41</td><td>Reserva nacional de Salinas y Aguada Blanca</td><td> Arequipa</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>42</td><td>Reserva nacional de Tumbes</td><td> Tumbes</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>43</td><td>Reserva nacional del Titicaca</td><td> Puno</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>44</td><td>Reserva nacional Matsés</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>45</td><td>Reserva nacional Pacaya Samiria</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>46</td><td>Reserva nacional Pampa Galeras-Bárbara d'Achille</td><td> Ayacucho</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>47</td><td>Reserva nacional Pucacuro</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>48</td><td>Reserva nacional Pucacuro</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>49</td><td>Reserva nacional Sistema de Islas, Islotes y Puntas Guaneras</td><td> Áncash</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>50</td><td>Reserva nacional Tambopata</td><td> Madre de Dios</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>51</td><td>Reserva Paisajística Nor Yauyos-Cochas</td><td> Junín</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>52</td><td>Reserva Paisajística Nor Yauyos-Cochas</td><td> Lima</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>53</td><td>Reserva Paisajística Subcuenca del Cotahuasi</td><td> Arequipa</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>54</td><td>Reserva Paisajística Subuenta del Cotahuasi</td><td> Arequipa</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>55</td><td>Reservada Nacional San Fernado</td><td> Ica</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>56</td><td>Santuario Histórico Bosque de Pómac</td><td> Lambayeque</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>57</td><td>Santuario Histórico de Chacamarca</td><td> Junín</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>58</td><td>Santuario Histórico de la Pampa de Ayacucho</td><td> Ayacucho</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>59</td><td>Santuario Histórico de Machu Picchu</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>60</td><td>Santuario Nacional Cordillera de Colán</td><td> Amazonas</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>61</td><td>Santuario Nacional de Ampay</td><td> Apurímac</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>62</td><td>Santuario Nacional de Calipuy</td><td> La Libertad</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>63</td><td>Santuario Nacional de Huayllay</td><td> Pasco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>64</td><td>Santuario Nacional de Lagunas de Mejía</td><td> Arequipa</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>65</td><td>Santuario Nacional Manglares de Tumbes</td><td> Tumbes</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>66</td><td>Santuario Nacional Megantoni</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>67</td><td>Santuario Nacional Pampa Hermosa</td><td> Junín</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>68</td><td>Santuario Nacional Tabaconas-Namballe</td><td> Cajamarca</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>69</td><td>Zona Reservada Bosques de Zárate</td><td> Lima</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>70</td><td>Zona Reservada Cerro Khapia</td><td> Cuzco</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>71</td><td>Zona Reservada Chancaybaños</td><td> Cajamarca</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>72</td><td>Zona Reservada Cordillera Huayhuash</td><td> Áncash</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>73</td><td>Zona Reservada Güeppí</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>74</td><td>Zona Reservada Humedales de Puerto Viejo</td><td> Lima</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>75</td><td>Zona Reservada Illescas</td><td> Piura</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>76</td><td>Zona Reservada Lomas de Ancón</td><td> Lima</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>77</td><td>Zona Reservada río Nieva</td><td> Amazonas</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>78</td><td>Zona Reservada Santiago-Comaina</td><td> Amazonas</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+										<tr><td>79</td><td>Zona Reservada Yaguas</td><td> Loreto</td><td><a href="#" class="verProyecto"><span class="glyphicon glyphicon-ok"></span></a></td></tr>
+
+									</tbody>
+								</table>
+								<div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+		   </div>
+		  </div>
+		</div>
+		<!--FIN MODAL VER ANP-->
+
+		<!-- Modal -->
+		<div class="modal fade" id="showImgModal" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" >
+		    <div class="modal-content">
+		      <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+				</button>
+				<h4 class="modal-title" id="titleModalLabel">
+					<span>Agregar</span>
+				</h4>
+			</div>
+		      <div class="modal-body">
+		        <div class="row" >
+		        	
+		        	<img src="image/logo.png" height="278" width="278" alt="imgen gabo" class="img-responsive">
+
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+	</body>
+</html>
+

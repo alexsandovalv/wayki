@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wayki - Tambopata</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <!-- <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page" data-quicklinks="true" id="pageone">
+        <div data-role="header">
+            <!-- <h2>Wayki</h2> -->
+            <h2><img src="images/logo-wayki.png" width="120" alt="Proyecto Wayki"></h2>
+            <a href="descripcion.html" role="button" data-role="button" class="ui-btn ui-icon-arrow-l ui-corner-all ui-btn-inline ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">
+					back
+			</a>            
+        </div>
+        <!-- /header -->
+        <div data-role="content" data-theme="c" class="jqm-content">
+			<h2><b>Nombre del Proyecto</b></h2>
+			<p>Desarrollo de Herramienta para la Gestión de Proyectos de Desarrollo</p>
+
+			<h2><b>Tipo de Proyecto</b></h2>
+			<p>Investigacion y Tecnologia</p>
+
+			<h2><b>Descripción del Proyecto</b></h2>
+			<p>Realizar el análisis, diseño, construcción e implementación de una herramienta multiplataforma para servir de guía en la gestión y como repositorio de Proyectos de Desarrollo en Áreas Naturales</p>
+
+			<h2><b>Área Natural Beneficiada</b></h2>
+			<p>Conceción para Conservación Ojos de Agua</p>
+
+			<h2><b>Objetivo General</b></h2>
+			<p>Promover, guiar durante la ejecución y brindar las herramientas necesarias para poner en práctica el uso colaborativo de la información a nivel de Organismos Gestores de Proyectos.</p>
+
+			<h2><b>Objetivos Específicos</b></h2>
+			<p>Construir una herramienta que apoye, conecte y guíe a los organismos gestores de proyectos de desarrollo en Áreas Naturales en la planificación, control y evaluación de proyectos.Promover el voluntariado en los jóvenes por medio de una herramienta movil que facilite el acceso a la información de las Áreas Naturales y los proyectos de desarrollo realizados, ejecutándose, o en planificación.Dar mayor visibilidad a los proyectos ralizados en áreas Naturales en la comunidad de turistas y voluntarios que visitan el país.Informar acerca de las áreas Naturales, recursos e importancia de las Áreas Naturales del Perú.Conectar voluntarios con los proyectos de desarrollo, generando mayor aprovechamiento de esta fuerza de trabajo.Conectar voluntarios o colaboradores remotos con los proyectos de desarrollo de Áreas Naturales.
+			</p>
+			
+			<h2><b>Fecha de Inicio del Proyecto</b></h2>
+			<p>22/05/2016</p>
+
+			<h2><b>Fecha de Fin del Proyecto</b></h2>
+			<p>30/10/2016</p>
+			
+        </div>
+
+        <a href="#pagetwo" class="ui-btn">Aplicar Voluntariado</a>
+        <a href="#pagethree" class="ui-btn">Pedir mas Informacion</a>
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <p>Copyright 2016 Wayki Foundation</p>
+        </div>
+        <!-- /footer -->
+    </div>
+    <div data-role="page" data-dialog="true" id="pagetwo">
+        <div data-role="header">
+            <h1>Aplicar Voluntariado</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <h1>Gracias por la iniciativa</h1>
+            <p>Se esta enviando un procedimiento a tu correo y el Jefe de Proyecto se comunicará contigo.</p>
+        </div>
+    </div>
+    <div data-role="page" data-dialog="true" id="pagethree">
+        <div data-role="header">
+            <h1>Pedir mas información</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form method="post" action="#pageone">
+                <p>Se enviará un mail al jefe del proyecto pidiendo mas información</p>
+                <label for="correo">Ingrese su correo electronico</label>
+                <input type="email" data-clear-btn="true" name="correo" id="correo">
+                <button type="submit" class="ui-btn ui-shadow ui-corner-all ui-mini">Enviar</a>
+            </form>
+        </div>
+        <div data-role="footer" data-tap-toggle="false" class="jqm-footer">
+            <p>Copyright 2016 Wayki Foundation</p>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+
+</html>

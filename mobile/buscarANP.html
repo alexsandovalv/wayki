@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wayki</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <!-- <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page" data-quicklinks="true">
+        <div data-role="header" data-position="fixed">
+            <!-- <h2>Wayki</h2> -->
+            <h2><img src="images/logo-wayki.png" width="120" alt="Proyecto Wayki"></h2>
+            <!-- <a href="#" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a> -->
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a href="registrar.html" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-nodisc-icon ui-btn-right ui-alt-icon" >registrar</a>
+        </div>
+        <!-- /header -->
+        <div data-role="content" data-theme="c">
+            <div data-demo-html="true">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Location.." data-inset="true">
+                    <li><a href="descripcion.html">Bosque de Protección Alto Mayo</a></li>
+                    <li><a href="descripcion.html">Bosque de Protección Pagaibamba</a></li>
+                    <li><a href="descripcion.html">Bosque de Protección Pui-Pui</a></li>
+                    <li><a href="descripcion.html">Bosque de Protección Puquio Santa Rosa</a></li>
+                    <li><a href="descripcion.html">Bosque de Protección San Matías-San Carlos</a></li>
+                    <li><a href="descripcion.html">Parque nacional Bahuaja Sonene</a></li>
+                    <li><a href="descripcion.html">Coto de Caza Sunchubamba</a></li>
+                    <li><a href="descripcion.html">Parque nacional Alto Purús</a></li>
+                    <li><a href="descripcion.html">Parque nacional Cerros de Amotape</a></li>
+                    <li><a href="descripcion.html">Parque nacional Cordillera Azul</a></li>
+                    <li><a href="descripcion.html">Parque nacional Cutervo</a></li>
+                    <li><a href="descripcion.html">Parque nacional del Manu</a></li>
+                    <li><a href="descripcion.html">Parque nacional del Río Abiseo</a></li>
+                    <li><a href="descripcion.html">Parque nacional Güeppi-Sekime</a></li>
+                </ul>
+            </div>
+        </div> <!-- content -->
+
+        <div data-role="panel" data-display="overlay" class="jqm-navmenu-panel" data-position="left" data-theme="a" id="nav-panel">
+			<ul data-role="listview" class="jqm-list ui-alt-icon ui-nodisc-icon">
+				<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+				<li data-icon="home"><a href="buscarANP.html">Buscar por Area Natural</a></li>
+				<li data-icon="navigation"><a href="buscarProyectos.html">Buscar por Proyectos</a></li>
+			</ul>
+		</div><!-- /panel -->
+
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <p>Copyright 2016 Wayki Foundation</p>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+
+</html>

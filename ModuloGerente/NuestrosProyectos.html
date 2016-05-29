@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mi Compañia</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
+		<link rel="shortcut icon" href="../image/logo.PNG" />
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.form-group{
+				margin: 5px;
+			}
+			.glyphicon{
+				color:green;
+			}
+			th{
+				background-color: #419641 !important;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">
+				<img src="../image/logo.png" height="30" width="100" /></a>
+	        </div>
+	       <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"> <a href="Principal.html">Inicio </a></li>
+	            <li class="active"><a href="MiOrganizacion.html">Mi Organizacion</a> </li>
+	            <li class="active"><a href="buscarProyecto.html">Buscar Proyectos</a></li>
+	            <li class="active"><a href="CrearProyecto.html">Crear Nuevo Proyecto</a></li>
+	            <li ><a href="NuestrosProyectos.html">Nuestros Proyectos</a></li>
+
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li>
+	            	<p class="navbar-text navbar-right">
+	            		<i class="glyphicon glyphicon-user"></i>&nbsp;Franco Damiani
+	            	</p>
+		        </li>
+		        <li>
+	                <a href="/wayki" class="navbar-link"><i class="glyphicon glyphicon-off"></i>&nbsp;Cerrar Sesion</a>
+	            </li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+
+	    <div class="container">
+	    	<div class="header-title">
+	    		<h2 class="text-center text-uppercase"><strong>Nuestros Proyectos</strong></h2>
+	    	</div>
+
+	    	<div class="container">
+	    	
+
+	    	<div class="col-xs-12 col-sm-12 col-md-11 container-fluid">
+				<div class="row">				
+					<fieldset>
+						
+
+						<div class="table-responsive table-list-one">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Código</th>
+										<th>Nombre del Proyecto</th>
+										<th>Tipo de Proyecto</th>
+										<th>Estado</th>
+										<th>Área Natural</th>
+										<th>Estado</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>123</td>											
+										<td>Sensibilización ambiental durante el transporte fluvial en el Amazonas</td>
+										<td>Información y Comunicación</td>
+										<td>Finalizado</td>
+										<td>Pacaya Samiria</td>
+										<td>
+											<a href="#" class="verProyecto">
+												<span class="glyphicon glyphicon-search"></span>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>687</td>											
+										<td>Desarrollo de Herramienta para la Gestión de Proyectos de Desarrollo</td>
+										<td>Investigación y Tecnología</td>
+										<td>En Ejecución</td>
+										<td>Bosque de Protección Alto Mayo</td>
+										<td>
+											<a href="#" class="verProyecto">
+												<span class="glyphicon glyphicon-search"></span>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>214</td>											
+										<td>Proyecto integral de gestion ambiental de residuos solidos en la ciudad binacional de desaguedor</td>
+										<td>Gestión Ambiental</td>
+										<td>Finalizado</td>
+										<td>Reserva Nacional del Titicaca</td>
+										<td>
+											<a href="#" class="verProyecto">
+												<span class="glyphicon glyphicon-search"></span>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</div>
+	    	</div>
+	    </div>
+
+	    </div>
+
+		<!-- jQuery -->
+		<script src="../js/jquery.js"></script>		
+		<!-- Bootstrap JavaScript -->
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+		<script src="../js/bootstrap-datetimepicker.min.js"></script>
+		
+
+		<script src="../js/bloodhound.min.js"></script>
+		<script src="../js/typeahead.jquery.min.js"></script>
+		<script src="../js/typeahead.bundle.min.js"></script>
+		<script src="../js/bootstrap3-typeahead.min.js"></script>
+		
+		
+
+		<script type="text/javascript">
+			$(function() {
+
+				var typeahead = jQuery.fn.typeahead.noConflict();
+				jQuery.fn._typeahead = typeahead;
+
+
+
+				$('#datetimepicker').datetimepicker({
+                    locale: 'es',
+                    format: 'L'
+                });
+
+                 $(".verProyecto").click(function(event) {
+                	$("#verProyectoModal").modal({
+						keyboard: false,
+						backdrop: "static",
+						show : true
+					});
+                });
+			});		
+		</script>
+
+		<style type="text/css">
+			.typeahead, .tt-query, .tt-hint {
+			  width: 100%;
+			  padding: 8px 12px;
+			  font-size: 14px;
+			  line-height: 30px;
+			  border: 2px solid #ccc;
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  outline: none;
+			}
+
+			.typeahead {
+			  background-color: #fff;
+			}
+
+			.typeahead:focus {
+			  border: 2px solid #0097cf;
+			}
+
+			.tt-query {
+			  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+
+			.tt-hint {
+			  color: #999
+			}
+
+			.tt-menu {
+			  width: 100%;
+			  margin: 6px 0;
+			  padding: 8px 0;
+			  background-color: #fff;
+			  border: 1px solid #ccc;
+			  border: 1px solid rgba(0, 0, 0, 0.2);
+			  -webkit-border-radius: 8px;
+			     -moz-border-radius: 8px;
+			          border-radius: 8px;
+			  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+			}
+
+			.tt-suggestion {
+			  padding: 3px 20px;
+			  font-size: 12px;
+			  line-height: 24px;
+			}
+
+			.tt-suggestion:hover {
+			  cursor: pointer;
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion.tt-cursor {
+			  color: #fff;
+			  background-color: #0097cf;
+			}
+
+			.tt-suggestion p {
+			  margin: 0;
+			}			
+			.twitter-typeahead{
+			     width: 100%;
+			}
+			.tt-dropdown-menu {
+			     width: 100%;
+			}
+		</style>
+
+		<!-- Modal -->
+		<div class="modal fade" id="verProyectoModal" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" >
+		    <div class="modal-content">
+		      <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+				</button>
+				<!--PESTAÑAS-->
+				<script>
+				$(document).ready(function(){
+				    $(".nav-tabs a").click(function(){
+				        $(this).tab('show');
+				    });
+				    $('.nav-tabs a').on('shown.bs.tab', function(event){
+				        var x = $(event.target).text();         // active tab
+				        var y = $(event.relatedTarget).text();  // previous tab
+				        $(".act span").text(x);
+				        $(".prev span").text(y);
+				    });
+				});
+				</script>
+				<ul class="nav nav-tabs">
+				    <li class="active" ><a href="#home">Información del Proyecto</a></li>
+				    <li  ><a href="#tab1">Recursos</a></li>
+				    <li  ><a href="#tab2">Diseño de Equipo</a></li>
+				    <li  ><a href="#tab3">Diseño de Evaluación</a></li>
+				    <li  ><a href="#tab4">Documentación</a></li>
+ 			  	</ul>
+ 			  	<!--PESTAÑAS-->
+			</div>
+		      <div class="tab-content">
+		      	<div id="home" class="tab-pane fade in active">
+					<div class="modal-body">
+				        <div class="row" >
+				        	<form action="#" class="form-horizontal" rol="form">
+								<fieldset>
+										<div class="col-xs-12 col-md-12"  >
+										<div class="form-group"  >
+		   									<label for="txtNombreProyecto" class="col-sm-4 control-label" >Nombre del Proyecto :</label>
+											<div class="col-sm-8" >
+												<input type="text" id="txtNombreProyecto" class="form-control" value="Desarrollo de Herramienta para la Gestión de Proyectos de Desarrollo" placeholder="" />
+											</div>
+										</div>
+										
+										<div class="form-group" >
+											<label for="cboTipoProyecto" class="col-sm-4 control-label">Tipo de Proyecto :</label>
+											<div class="col-sm-8" >
+												<select id="cboTipoProyecto" class="form-control" value="1" >
+												    <option value="0"></option>
+													<option value="1" selected="true">Investigación y Tecnología</option>
+													<option value="2">Formación y Capacitación</option>
+													<option value="3">Información y Comunicación</option>
+													<option value="4" >Participación y Dinamización Social</option>
+													<option value="5">Estudios e Investigación</option>
+													<option value="6" >Conservación de especie</option>
+													<option value="7" >Construcción e Infraestrución</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="form-group">
+											<label class="col-sm-4 control-label">Descripción del Proyecto :</label>
+											<div class="col-sm-8" >
+												<textarea rows="3" cols="60" id="txtDescripcionProyecto" class="form-control"  placeholder="">Realizar el análisis, diseño, construcción e implementación de una herramienta multiplataforma para servir de guía en la gestión y como repositorio de Proyectos de Desarrollo en Áreas Naturales</textarea>
+												
+											</div>																
+										</div>
+
+
+										<div class="form-group" >
+											<label for="txtAreaNatural" class="col-sm-4 control-label">Área Natural Beneficiada:</label>
+											<div class="col-sm-6 input-group">
+												<input type="text" id="txtAreaNatural" class="form-control" value="Conceción para Conservación Ojos de Agua" placeholder="Seleccione el Área Natural objetivo del Proyecto" />
+												
+													<span  class="input-group-addon">
+														<span class="glyphicon glyphicon-search buscarANP"></span>
+													</span>
+												
+											</div>																
+										</div>
+									
+										<div class="form-group">
+											<label  class="col-sm-4 control-label">Objetivo General:</label>
+											<div class="col-sm-8">
+												<textarea rows="3" cols="60" id="txtDescripcionProyecto" class="form-control" >Promover, guiar durante la ejecución y brindar las herramientas necesarias para poner en práctica el uso colaborativo de la información a nivel de Organismos Gestores de Proyectos.</textarea>
+											</div>																
+										</div>
+										<div class="form-group">
+											<label  class="col-sm-4 control-label">Objetivos Específicos:</label>
+											<div class="col-sm-8">
+												<textarea rows="10" cols="60" id="txtDescripcionProyecto" class="form-control">Construir una herramienta que apoye, conecte y guíe a los organismos gestores de proyectos de desarrollo en Áreas Naturales en la planificación, control y evaluación de proyectos.Promover el voluntariado en los jóvenes por medio de una herramienta movil que facilite el acceso a la información de las Áreas Naturales y los proyectos de desarrollo realizados, ejecutándose, o en planificación.Dar mayor visibilidad a los proyectos ralizados en áreas Naturales en la comunidad de turistas y voluntarios que visitan el país.Informar acerca de las áreas Naturales, recursos e importancia de las Áreas Naturales del Perú.Conectar voluntarios con los proyectos de desarrollo, generando mayor aprovechamiento de esta fuerza de trabajo.Conectar voluntarios o colaboradores remotos con los proyectos de desarrollo de Áreas Naturales.</textarea>
+											</div>																
+										</div>
+
+										<div class="form-group">
+											<label for="txtFechaInicial" class="col-sm-4 control-label">Fecha de Inicio del Proyecto :</label>
+											<div class="col-sm-2 fechapicker input-group" id='datetimepicker'>
+												<input type="text" id="txtFechaInicial" class="form-control" value="22/05/2016" placeholder="01/01/2016" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div>																
+										</div>
+
+										<div class="form-group">
+											<label for="txtFechaFinal" class="col-sm-4 control-label">Fecha de Fin del Proyecto :</label>
+											<div class="col-sm-2 fechapicker input-group" id='datetimepicker'>
+												<input type="text" id="txtFechaFinal" class="form-control" value="30/10/2016" placeholder="" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div>																
+										</div>
+										<div class="form-group">
+											<label for="txtJefeProyecto" class="col-sm-4 control-label">Invitar Jefe de Proyecto:</label>
+											<div class="col-sm-6 input-group" id='txtJefeProyecto'>
+												<input type="text" id="txtJefeProyecto" class="form-control" value="franco.damiani@hotmail.com" placeholder="Ingrese un correo para invitar Jefe de Proyecto" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-envelope"></span>
+												</span>
+											</div>																
+										</div>
+										
+									</div>
+								</fieldset>
+								
+								<hr>
+								<div class="col-xs-offset-6 col-sm-offset-4 col-md-offset-4 btn-group btn-group-lg" role="group" aria-label="...">
+										<button type="button" onclick="window.location.href='Principal.html'"  class="btn btn-success">Guardar</button>
+										<button type="button" onclick="window.location.href='Principal.html'" class="btn btn-default">Cancelar</button>
+									</div>
+							</form>
+				        </div>
+				     </div>
+				  </div>
+				   <div id="tab1" class="tab-pane fade">
+			       	
+					<fieldset>
+						<div class="table-responsive table-list-one; col-lg-12" >
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th style="background-color: green">Cantidad</th>
+										<th style="background-color: green">Descripción</th>
+										<th style="background-color: green">Costo Unitario</th>
+										<th style="background-color: green">Precio Unitario</th>
+										<th style="background-color: green"> </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>4</td>											
+										<td>Alquiler laptop core 4, 4GB RAM, 500GB Disco Duro x 4 Meses</td>
+										<td>1000.00</td>
+										<td>4000.00</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>4</td>											
+										<td>Alquiler servicio de internet banda ancha x 1 Mes</td>
+										<td>300.00</td>
+										<td>1200.00</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>4</td>											
+										<td>Alquiler oficina amoblada y servicios x 1 Mes</td>
+										<td>600.00</td>
+										<td>2400.00</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>4</td>											
+										<td>Alquiler oficina amoblada y servicios x 1 Mes</td>
+										<td>600.00</td>
+										<td>2400.00</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+					</fieldset>
+			    </div>
+
+			     <div id="tab2" class="tab-pane fade">
+			       	
+					<fieldset>
+						<div class="table-responsive table-list-one; col-lg-12" >
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th style="background-color: green">Cantidad</th>
+										<th style="background-color: green">Rol</th>
+										<th style="background-color: green">Conocimiento Requerido</th>
+										<th style="background-color: green">Tiempo</th>
+										<th style="background-color: green">Costo Unit.</th>
+										<th style="background-color: green">Presupuesto Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>											
+										<td>Diseñador, Maqueteador Web</td>
+										<td>HTML 5, Ilustrator, Photoshop</td>
+										<td>30 días</td>
+										<td>2000.00</td>
+										<td>2000.00</td>
+										
+									</tr>
+									<tr>
+										<td>2</td>											
+										<td>Desarrolladores Web</td>
+										<td>PHP, SQL, framework PHP, XP</td>
+										<td>40 días</td>
+										<td>4000.00</td>										
+										<td>8000.00</td>
+									</tr>
+									<tr>
+										<td>1</td>											
+										<td>Gestor, Analista Funcional</td>
+										<td>Project, Conocimiento del Negocio, Metodologias</td>
+										<td>80 días</td>
+										<td>8000.00</td>
+										<td>8000.00</td>
+									</tr>
+									
+								</tbody>
+							</table>
+							
+						</div>
+					</fieldset>
+
+			    </div>
+
+			     <div id="tab3" class="tab-pane fade">
+			       	
+					<fieldset>
+						<div class="table-responsive table-list-one; col-lg-12" >
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th style="background-color: green">Descripción del Indicador</th>
+										<th style="background-color: green">Tipo de Indicador</th>
+										<th style="background-color: green">Valor Esperado</th>
+										<th style="background-color: green">Min.Valor Aceptado</th>
+										<th style="background-color: green">Peso</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Ganar la Hackaton</td>											
+										<td>Éxito o Fracaso</td>
+										<td>Éxito</td>
+										<td>Éxito</td>
+										<td>20</td>
+									</tr>
+									<tr>
+										<td>Nivel de aceptación de los Gerentes de Organización</td>											
+										<td>Numérico a Superar</td>
+										<td>90</td>
+										<td>80</td>
+										<td>10</td>										
+									</tr>
+									<tr>
+										<td>Nivel de aceptación de los Jefes de Proyecto</td>											
+										<td>Numérico a Superar</td>
+										<td>90</td>
+										<td>80</td>
+										<td>10</td>										
+									</tr>
+									<tr>
+										<td>Número de proyectos registrados después de 10 días de su puesta en producción</td>											
+										<td>Numérico a Superar</td>
+										<td>50</td>
+										<td>35</td>
+										<td>10</td>										
+									</tr>
+									<tr>
+										<td>Nivel de Satisfacción del Sponsor</td>											
+										<td>Numérico a Superar</td>
+										<td>90</td>
+										<td>85</td>
+										<td>50</td>										
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+					</fieldset>
+
+			    </div>
+
+			    <div  id="tab4" class="tab-pane fade">
+			    <fieldset>
+						<div class="table-responsive table-list-one; col-lg-12" >
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th style="background-color: green">Documento</th>
+										<th style="background-color: green">Autor</th>
+										<th style="background-color: green"> </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Documento de Especificación de Requisitos de Software</td>											
+										<td>Franco Damiani Fontana</td>
+										<td>
+											<a href="documentos/proyecto_desaguadero.pdf" class="verProyecto" download="Proyecto Integral de Gestión Ambiental de Residuos Sólidos en la ciudad Binacional de Desaguadero - Bolivia - Peru.pdf">
+												<span class="glyphicon glyphicon-save"></span>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>Documento de Historias de Usuario</td>											
+										<td>Franco Damiani Fontana</td>
+										<td>
+											<a href="documentos/proyecto_desaguadero.pdf" class="verProyecto" download="Proyecto Integral de Gestión Ambiental de Residuos Sólidos en la ciudad Binacional de Desaguadero - Bolivia - Peru.pdf">
+												<span class="glyphicon glyphicon-save"></span>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>Modelo de Datos Relacional</td>											
+										<td>Franco Damiani Fontana</td>
+										<td>
+											<a href="documentos/Modelo Relacional de BD.pdf" class="verProyecto" download="Modelo Relacional de BD.pdf">
+												<span class="glyphicon glyphicon-save"></span>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+					</fieldset>
+			    </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" onclick="window.location.href='Principal.html'" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+	</body>
+</html>
+
